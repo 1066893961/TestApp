@@ -2,8 +2,8 @@ package application.app.testapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -36,14 +36,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(WebView webView, int i) {
                 super.onProgressChanged(webView, i);
-                if (i >= 100) {
-                    pb.setProgress(100);
-                    webview.setVisibility(View.VISIBLE);
-                    pb.setVisibility(View.GONE);
-                } else {
-                    webview.setVisibility(View.GONE);
-                    pb.setVisibility(View.VISIBLE);
-                }
+                Log.i("pos==", i+"");
+//                if (i >= 100) {
+//                    pb.setProgress(100);
+//                    webview.setVisibility(View.VISIBLE);
+//                    pb.setVisibility(View.GONE);
+//                } else {
+//                    webview.setVisibility(View.GONE);
+//                    pb.setVisibility(View.VISIBLE);
+//                }
             }
 
         });
